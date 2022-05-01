@@ -1,5 +1,7 @@
 # Where are you ? :monocle_face:
- wau helps you find apps where target email is registered.
+ - wau helps you find apps where target email is registered.
+   - It takes less than **2** seconds!
+   - It can be executed through a Command Line Interface!
  
 > The development process continues and the project is open to contributions.
 
@@ -27,7 +29,7 @@
 | Name      | Status |
 |-----------|--------|
 | Adobe     |    :white_check_mark:    |
-| Discord  |    :white_check_mark:     |
+| Discord   |    :white_check_mark:    |
 | Instagram |    :white_check_mark:    |
 | Spotify   |    :white_check_mark:    |
 | Twitter   |    :white_check_mark:    |
@@ -39,3 +41,7 @@
 - [holehe](https://github.com/megadose/holehe)
 - [socialscan](https://github.com/iojw/socialscan)
 
+### To Do
+- [ ] Add more apps.
+- [ ] Add output module (txt).
+- [ ] Make **wau** faster.
