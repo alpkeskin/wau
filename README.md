@@ -1,7 +1,8 @@
 # Where are you ? :monocle_face:
  - wau helps you find apps where target email is registered.
-   - It takes less than **2** seconds!
-   - It can be executed through a Command Line Interface!
+   - wau takes less than **2** seconds!
+   - wau can be executed through a **Command Line Interface**!
+   - wau checks **6** popular apps!
  
 > The development process continues and the project is open to contributions.
 
