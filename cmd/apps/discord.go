@@ -47,8 +47,14 @@ func Discord(wg *sync.WaitGroup, email string, showFalse bool) {
 		body, _ := ioutil.ReadAll(res.Body)
 		var response discordResponse
 		json.Unmarshal(body, &response)
-		if response.Errors.Email.Errors[0].Code == "EMAIL_ALREADY_REGISTERED" {
-			fmt.Println("Discord \U0001f440")
+		if len(response.Errors.Email.Errors) > 0 {
+			if response.Errors.Email.Errors[0].Code == "EMAIL_ALREADY_REGISTERED" {
+				fmt.Println("Discord \U0001f440")
+			} else {
+				if showFalse {
+					fmt.Println("Discord", color.RedString(" [Not here!]"))
+				}
+			}
 		} else {
 			if showFalse {
 				fmt.Println("Discord", color.RedString(" [Not here!]"))
