@@ -8,7 +8,7 @@
 
 ## Installation
 
-`go install github.com/alpkeskin/wau@latest`
+`go install -v github.com/alpkeskin/wau@latest`
 
 ## Usage
 
