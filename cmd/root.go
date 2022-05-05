@@ -3,6 +3,7 @@ package cmd
 import (
 	"fmt"
 	"os"
+	"regexp"
 	"sync"
 	"time"
 
@@ -19,6 +20,11 @@ var rootCmd = &cobra.Command{
 	Args:  cobra.ExactArgs(1),
 	Long:  "wau helps you find apps where target mail is registered. [v0.1]",
 	Run: func(cmd *cobra.Command, args []string) {
+		re := regexp.MustCompile("^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$")
+		if !re.MatchString(args[0]) {
+			color.Red("Invalid email address!")
+			os.Exit(0)
+		}
 		start := time.Now()
 		fmt.Println("Where are you", color.YellowString(args[0]), "? \U0001f9d0")
 
